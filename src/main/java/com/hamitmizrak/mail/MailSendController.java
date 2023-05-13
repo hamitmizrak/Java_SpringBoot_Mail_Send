@@ -1,8 +1,13 @@
-package com.hamitmizrak.util;
+package com.hamitmizrak.mail;
 
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import org.apache.commons.lang3.CharEncoding;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,7 +16,7 @@ import java.io.File;
 @Controller
 public class MailSendController {
 
-  /*  @Autowired
+   @Autowired
     private JavaMailSender mailSender;
 
     //http://localhost:8080/contact1
@@ -66,5 +71,5 @@ public class MailSendController {
         return "Mail Gönderildi";
     }
 
-*/
+
 }
